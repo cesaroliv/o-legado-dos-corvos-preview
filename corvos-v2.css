@@ -1,0 +1,60 @@
+/* Livro 01 — cinematic editorial refinements.
+   Original photographs/products preserved; remove duplicated backgrounds. */
+.chapter-three .chapter-image{
+  background-image:linear-gradient(90deg,#090c13df 0%,#13111bed 45%,#100d13a6 100%),url('assets/book-back.webp');
+  background-position:center 42%;background-size:cover;
+  filter:grayscale(.65) blur(2px) brightness(.72);
+}
+.chapter-three .chapter-vignette{
+  background:linear-gradient(90deg,#060a10e8,#080b12bd 48%,#080b12d9),
+  linear-gradient(0deg,#090a10 0%,transparent 45%,#0b0d12b3);
+}
+.quote-film-image{
+  background:radial-gradient(ellipse at 74% 27%,#3c29234d,transparent 37%),
+  radial-gradient(ellipse at 25% 75%,#2837474d,transparent 38%),
+  linear-gradient(145deg,#0c121a 0%,#151923 51%,#05080d 100%);
+  filter:none;
+}
+.quote-film-image::after{
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(95deg,transparent 0 78px,#ffffff04 79px 80px);
+  opacity:.45;pointer-events:none;
+}
+.closing-background{
+  background:radial-gradient(ellipse at 50% 23%,#5026228c 0%,#22141a80 29%,transparent 66%),
+  radial-gradient(ellipse at 50% 102%,#14202a 0%,transparent 56%),
+  linear-gradient(180deg,#080b10,#101014 57%,#05080c);
+  filter:none;
+}
+.closing-shade{background:linear-gradient(0deg,#05080dde,transparent 60%,#05080d99)}
+.quote-film,.closing{border-top:1px solid rgba(237,210,182,.10)}
+.footer-contact{color:#e6a99e!important}
+@media(max-width:730px){
+  .hero{height:auto;min-height:max(940px,110svh);padding:0 23px 85px;
+    display:flex;justify-content:flex-end;align-items:flex-end;flex-direction:column;background:#04080d}
+  .hero-film{height:min(78svh,760px);top:0;bottom:auto;object-fit:cover;object-position:50% 18%}
+  .hero-shade{background:
+    linear-gradient(0deg,#04080d 0%,#04080dfa 22%,#04080dd6 38%,#050a0e31 74%,#05080d72 100%),
+    linear-gradient(90deg,#03070c22,#03070c05 50%,#03070c33)}
+  .hero-copy{width:100%;margin-top:auto;position:relative;z-index:2;padding:0 0 43px}
+  .hero-topline{top:105px;z-index:3}.hero-eyebrow{margin-bottom:17px}
+  .hero h1{font-size:clamp(61px,13.2vw,79px);letter-spacing:-.057em;line-height:.91}
+  .hero-description{margin:20px 0 25px;line-height:1.65;max-width:35ch}
+  .hero-actions{gap:22px}.hero-actions .button{min-width:min(100%,280px)}
+  .hero-footer{bottom:29px;z-index:3}
+  .story-chapter{height:auto;min-height:640px}
+  .chapter-three .chapter-image{background-position:54% 40%}
+  .chapter-three .chapter-vignette{background:linear-gradient(0deg,#070a10f7 0%,#0b0d13de 50%,#0a0b119c 100%)}
+  .quote-film-image{background:radial-gradient(ellipse at 35% 35%,#49312a4d,transparent 48%),linear-gradient(145deg,#0b1118,#12141c,#05080b)}
+  .closing-background{background:radial-gradient(ellipse at 48% 31%,#4a24225e,transparent 65%),linear-gradient(#090b11,#090b11)}
+  .closing .button-long{max-width:100%;min-width:0;letter-spacing:.1em}
+}
+@media(max-width:390px){
+  .hero{min-height:max(910px,110svh)}
+  .hero h1{font-size:clamp(53px,13.2vw,62px)}
+  .hero-actions .button{width:100%;min-width:0}
+}
+@media(prefers-reduced-motion:reduce){.hero{background-image:url('assets/hero-poster.webp')}.hero-film{display:none}}
+@media(max-width:730px) and (prefers-reduced-motion:reduce){
+  .hero{background:linear-gradient(0deg,#05080df7,#05080d35 65%),url('assets/hero-mobile-poster.webp') center top/cover no-repeat}
+}

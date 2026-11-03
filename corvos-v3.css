@@ -1,0 +1,137 @@
+/* CORVOS V3 — Chapter 03 cinematic dossier; design uses only grounded story labels.
+   Intentional art direction: typography, file papers and light, not repeated hero art. */
+.chapter-three{
+  background:
+    radial-gradient(ellipse 52% 85% at 75% 48%,rgba(100,56,42,.35) 0%,rgba(37,36,41,.30) 44%,transparent 82%),
+    linear-gradient(113deg,#071017 0%,#0b141a 43%,#111217 73%,#080c11 100%);
+}
+.chapter-three .chapter-image{display:none}
+.chapter-three .chapter-vignette{
+  background:linear-gradient(90deg,rgba(3,9,14,.45),transparent 55%),
+  linear-gradient(0deg,rgba(4,9,14,.48),transparent 30%,rgba(3,9,14,.30));
+}
+.chapter-three .chapter-content{position:relative;z-index:4;filter:drop-shadow(0 8px 20px #03060866)}
+.iris-evidence{
+  pointer-events:none;
+  position:absolute;right:clamp(24px,6.6vw,128px);top:50%;
+  transform:translateY(-50%);
+  width:min(44vw,720px);height:min(76%,735px);min-height:550px;
+  z-index:0;
+  perspective:1000px;
+}
+.iris-evidence::before{
+  content:"";position:absolute;inset:-8%;
+  background:radial-gradient(ellipse at 58% 53%,rgba(177,99,63,.21),rgba(35,40,48,.09) 44%,transparent 73%);
+  filter:blur(25px);
+}
+.iris-evidence::after{
+  content:"";position:absolute;inset:0;z-index:4;opacity:.34;
+  background:repeating-linear-gradient(145deg,transparent 0 49px,rgba(243,198,144,.055) 50px,transparent 51px);
+  mask-image:linear-gradient(90deg,transparent,#000,transparent);
+}
+.iris-evidence__topo{
+  position:absolute;inset:-6% -8%;
+  border:1px solid rgba(213,173,131,.07);
+  background:repeating-linear-gradient(0deg,transparent 0 62px,rgba(235,206,173,.036) 63px 64px),
+  repeating-linear-gradient(90deg,transparent 0 62px,rgba(235,206,173,.035) 63px 64px);
+  transform:rotate(-5deg);
+  opacity:.55;
+}
+.iris-file{
+  position:absolute;
+  background:linear-gradient(155deg,#24262a,#11171c 75%,#0b1319);
+  border:1px solid rgba(217,186,147,.3);
+  box-shadow:0 28px 65px #000b,inset 0 0 0 1px rgba(255,255,255,.03);
+}
+.iris-file--rear{
+  width:74%;height:72%;top:16%;left:8%;
+  transform:rotate(-12deg);
+  padding:33px;overflow:hidden;
+  background:linear-gradient(135deg,#262729,#1b2124);
+  border-color:rgba(200,146,110,.35);
+}
+.iris-file--rear::before{
+  content:"";position:absolute;top:48px;right:-75px;width:340px;height:340px;border:1px solid rgba(218,183,147,.14);border-radius:50%;
+  box-shadow:0 0 0 27px rgba(217,185,155,.025),0 0 0 95px rgba(217,185,155,.015);
+}
+.iris-file--rear small{display:block;color:#bc9e87;font-size:10px;font-weight:700;letter-spacing:.27em}
+.iris-file--rear span{
+  position:absolute;bottom:23px;right:25px;color:#a68368;font:500 108px/1 'Cormorant Garamond',Georgia,serif;opacity:.15;
+}
+.iris-file--front{
+  width:75%;height:82%;top:6%;right:5%;
+  padding:32px clamp(20px,3vw,43px);
+  transform:rotate(7deg);
+  background:
+    radial-gradient(ellipse at 72% 27%,rgba(125,62,52,.22),transparent 51%),
+    linear-gradient(152deg,#282b2b,#171b1e 54%,#0e141a);
+  overflow:hidden;
+}
+.iris-file--front::before{
+  content:"";position:absolute;inset:13px;border:1px solid rgba(220,187,152,.14);pointer-events:none;
+}
+.iris-file--front::after{
+  content:"";position:absolute;width:280px;height:280px;border:1px solid rgba(187,115,93,.17);
+  border-radius:50%;left:50%;top:38%;transform:translate(-50%,-50%);
+  box-shadow:0 0 0 18px rgba(187,115,93,.025),0 0 0 67px rgba(187,115,93,.025);
+}
+.iris-file__heading{display:flex;justify-content:space-between;gap:12px;color:#bb9880;letter-spacing:.24em;font-size:9px;font-weight:700;position:relative;z-index:2}
+.iris-file__label{font-size:10px;color:#c8a98b;letter-spacing:.26em;font-weight:600;position:relative;z-index:2;margin-top:30%}
+.iris-file__name{
+  color:#f0e2cf;font:500 clamp(53px,6vw,100px)/.80 'Cormorant Garamond',Georgia,serif;
+  letter-spacing:-.045em;margin:13px 0 30px;position:relative;z-index:3;
+  text-shadow:0 3px 21px #000b;
+}
+.iris-file__name em{font-weight:400;color:#d8ae9e}
+.iris-file__dash{height:1px;width:60%;background:linear-gradient(90deg,#ad5547,rgba(201,163,126,.14));margin-bottom:22px}
+.iris-file__question{
+  font-family:'DM Sans',Arial,sans-serif;color:#bdaca0;
+  font-size:clamp(9px,.72vw,12px);letter-spacing:.31em;line-height:1.9;font-weight:700;
+}
+.iris-file__stamp{
+  position:absolute;right:32px;bottom:33px;color:#d2a293;border:1px solid rgba(189,99,81,.5);
+  padding:9px 12px;transform:rotate(-9deg);font-size:9px;letter-spacing:.22em;font-weight:700;
+}
+.iris-evidence__note{
+  position:absolute;right:-2%;bottom:1%;z-index:5;
+  color:rgba(232,204,181,.62);font:600 9px/1.4 'DM Sans',Arial,sans-serif;letter-spacing:.26em;
+  transform:rotate(-3deg);
+}
+.iris-evidence__signal{
+  position:absolute;top:11%;left:0;width:9px;height:9px;background:#b7453b;border-radius:50%;
+  box-shadow:0 0 29px 8px rgba(180,64,48,.17);
+}
+@media (min-width:731px) and (max-width:1120px){
+  .iris-evidence{right:18px;width:48vw;opacity:.85}
+  .iris-file--front{padding:22px}
+  .iris-file__name{font-size:clamp(50px,6.5vw,72px)}
+  .chapter-three .chapter-content{max-width:45%}
+}
+@media(max-width:730px){
+  .chapter-three{min-height:820px;height:auto;max-height:none;
+    padding:385px 24px 100px;align-items:flex-end;justify-content:flex-start;
+    background:radial-gradient(ellipse at 58% 33%,#45312c4b,transparent 54%),linear-gradient(180deg,#0d151a,#0e1519 52%,#050a0e)}
+  .chapter-three .chapter-vignette{
+    background:linear-gradient(0deg,#050a0ee8 0%,rgba(5,11,15,.4) 39%,transparent 74%);
+  }
+  .chapter-three .chapter-content{max-width:100%;width:100%;z-index:4}
+  .iris-evidence{width:min(88vw,425px);height:390px;min-height:0;
+    top:12px;right:5%;transform:none;opacity:.9}
+  .iris-file--rear{top:12%;height:80%;width:70%;padding:20px}
+  .iris-file--front{height:89%;top:0%;width:74%;padding:23px}
+  .iris-file__label{margin-top:21%}
+  .iris-file__name{font-size:clamp(47px,12vw,72px);margin:11px 0 21px}
+  .iris-file__question{font-size:8px}
+  .iris-file__stamp{right:25px;bottom:21px;font-size:8px}
+  .iris-evidence__note{right:2%;bottom:-8%;font-size:8px}
+  .chapter-three .chapter-content h3{font-size:clamp(52px,10vw,82px)}
+}
+@media(max-width:390px){
+  .chapter-three{padding-top:345px}
+  .iris-evidence{height:345px}
+  .iris-file--front{padding:17px}
+  .iris-file__heading{font-size:7px}
+  .iris-file__name{font-size:clamp(47px,12vw,61px)}
+}
+/* Anchor hardening: fixed header is not a valid scroll destination. */
+.footer-top,.footer-bottom{scroll-margin-top:0}
