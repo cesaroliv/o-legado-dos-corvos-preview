@@ -54,7 +54,7 @@
   .hero h1{font-size:clamp(53px,13.2vw,62px)}
   .hero-actions .button{width:100%;min-width:0}
 }
-@media(prefers-reduced-motion:reduce){.hero{background-image:url('assets/hero-poster.webp')}.hero-film{display:none}}
+@media(prefers-reduced-motion:reduce){.hero{background-image:url('assets/hero-poster.webp?v=654bdfcc7735')}.hero-film{display:none}}
 @media(max-width:730px) and (prefers-reduced-motion:reduce){
   .hero{background:linear-gradient(0deg,#05080df7,#05080d35 65%),url('assets/hero-mobile-poster.webp') center top/cover no-repeat}
 }
