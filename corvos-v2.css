@@ -32,7 +32,7 @@
 @media(max-width:730px){
   .hero{height:auto;min-height:max(940px,110svh);padding:0 23px 85px;
     display:flex;justify-content:flex-end;align-items:flex-end;flex-direction:column;background:#04080d}
-  .hero-film{height:min(78svh,760px);top:0;bottom:auto;object-fit:cover;object-position:50% 18%}
+  .hero-film{height:min(78svh,760px);top:0;bottom:auto;object-fit:cover;object-position:19% center}
   .hero-shade{background:
     linear-gradient(0deg,#04080d 0%,#04080dfa 22%,#04080dd6 38%,#050a0e31 74%,#05080d72 100%),
     linear-gradient(90deg,#03070c22,#03070c05 50%,#03070c33)}
@@ -56,5 +56,5 @@
 }
 @media(prefers-reduced-motion:reduce){.hero{background-image:url('assets/hero-poster.webp?v=654bdfcc7735')}.hero-film{display:none}}
 @media(max-width:730px) and (prefers-reduced-motion:reduce){
-  .hero{background:linear-gradient(0deg,#05080df7,#05080d35 65%),url('assets/hero-mobile-poster.webp') center top/cover no-repeat}
+  .hero{background:linear-gradient(0deg,#05080df7,#05080d35 65%),url('assets/hero-poster.webp?v=654bdfcc7735') center top/cover no-repeat}
 }
